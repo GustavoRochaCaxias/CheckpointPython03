@@ -26,6 +26,12 @@ def adicionar_evento(sistema_cadastro,nome,tel,email,end):
     sistema_cadastro[nome]= evento
     print(f"Evento {nome} adicionado com sucesso!!!")
 
+def lista_evento():
+    print("Eventos disponíveis em nosso sistema:")
+    for evento in sistema_cadastro:
+        print(evento)
+    
+
 def evento ():
  while True:
   print("\n__AGENDA DE EVENTOS__\n")
@@ -49,6 +55,12 @@ def evento ():
     else:
      print(f"Esse evento já esta no nosso sistema:{user_name}")
 
+  elif user_op == "2":   
+   lista_evento()
+
+  if user_op == "8" :
+    print("Obrigado pela escolha, até mais !!")
+    break
+
 if __name__ == "__main__":
     evento()
-
